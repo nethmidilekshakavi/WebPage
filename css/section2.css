@@ -1,0 +1,71 @@
+
+#section2 > div {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    margin-top: -60px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#section2 video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.video-container1 {
+    top: 10%;
+    position: relative;
+    width: 100%;
+}
+
+.video-text2 {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    color: white;
+
+}
+
+.video-text2 h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+
+.video-text2 h5 {
+    position: relative;
+    left: -2%;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .video-text2 h2 {
+        font-size: 26px;
+    }
+
+    .video-text2 h5 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-text2 {
+        top: 55%;
+    }
+
+    .video-text2 h2 {
+        font-size: 22px;
+    }
+
+    .video-text2 h5 {
+        font-size: 14px;
+    }
+}

@@ -16,7 +16,7 @@
 }
 
 #section1 h1 {
-    margin-top: -130px;
+    margin-top: -100px;
     color: white;
     font-size: 30px;
     text-align: center;
@@ -27,7 +27,7 @@
 
 #section1 > div {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1700px;
     border-radius: 15px;
     margin-top: 30px;
     overflow: hidden;
@@ -77,4 +77,48 @@
         font-size: 1.8rem;
         margin-bottom: 25px;
     }
+}
+
+
+.video-section {
+    background-color: #1a1d20;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-title {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.video-container1 {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-container1 video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-text1 {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.video-text1 h2 {
+    top: -80%;
+    position: absolute;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.video-text1 h5 {
+    font-size: 18px;
+    margin-top: 10px;
 }

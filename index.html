@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/section1.css">
+    <link rel="stylesheet" href="css/section2.css">
+    <link rel="stylesheet" href="css/section3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
-<body>
+<body style="background-color: #1a1d20; overflow-x: hidden;">
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg text-white">
@@ -99,13 +103,106 @@
 
 </header>
 
-<section id="section1" style="background-color: #1a1d20">
-    <h1 style="color: white">New in 2025</h1>
-    <div>
-        <video src="assets/vidios/section1/Multi-mode%20traction%20control_desk_2x.mp4" autoplay muted loop></video>
-    </div>
+<section id="section1" class="video-section">
+    <h1 class="main-title">New in 2025</h1>
 
+    <div class="video-container">
+        <video src="assets/vidios/section1/Multi-mode%20traction%20control_desk_2x.mp4" loop muted playsinline></video>
+
+        <div class="video-text1">
+            <h2>Multi-Mode Traction Control</h2>
+            <h5>Peak performance meets unshakeable confidence with 3 modes to glide across all roads - Rain, Road, & Rally.</h5>
+        </div>
+    </div>
 </section>
+
+<section id="section2" class="video-section">
+    <div class="video-container1">
+        <video src="assets/vidios/section2/colour_desktop_1x.mp4" autoplay muted loop></video>
+
+        <div class="video-text2">
+            <h2>Two new colours.</h2>
+            <h5>Stealth Blue & Hyper Sand.</h5>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5" id="section3">
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card bg-dark text-white p-4 rounded-4 h-100">
+                <h4 class="fw-bold mb-4">ATHERSTACK<span class="text-warning">6</span></h4>
+                <ul class="list-unstyled">
+                    <li class="mb-3 d-flex align-items-center">
+                        <div class="icon-circle me-3  text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px; ">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        WhatsApp on Dash
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <div class="icon-circle me-3  text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        Share Live Location
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <div class="icon-circle me-3 text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-bell"></i>
+                        </div>
+                        Ping My Scooter
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <div class="icon-circle me-3  text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-alexa"></i>
+                        </div>
+                        Alexa Skills
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <div class="icon-circle me-3  text-white rounded-circle d-flex justify-content-center align-items-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-telephone-x"></i>
+                        </div>
+                        Call Decline with Message
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card bg-dark text-white p-4 rounded-4 h-100">
+                <h4 class="fw-bold mb-4 d-flex align-items-center">
+                    <img src="assets/images/section3/Ather-450-faster-charging.png" class="title-icon me-2" alt="icon">
+                    Faster charging
+                </h4>
+                <div class="mt-auto">
+                    <h1 class="fw-bold">80%</h1>
+                    <p class="text-secondary mb-0">0–80% • 3h</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card bg-dark text-white p-4 rounded-4 h-100">
+                <h4 class="fw-bold mb-4 d-flex align-items-center">
+                    <img src="assets/images/section3/Ather-450-higher-range.png" class="title-icon me-2" alt="icon">
+                    Higher range
+                </h4>
+
+                <div class="mt-auto">
+                    <h1 class="fw-bold">161km</h1>
+                    <p class="text-secondary mb-0">IDC range</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
