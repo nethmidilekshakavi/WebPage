@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Section 6 - Safe and sound (Owl Carousel + Bootstrap)</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Owl Carousel 2 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <style>
+    /* Section background */
+    #section6 {
+      background: #020202; /* very dark background like the screenshot */
+      color: #fff;
+      padding: 52px 18px;
+    }
+
+    /* Title */
+    #section6 .section-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    /* Layout for header + custom nav */
+    #section6 .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 18px;
+    }
+
+    /* Custom nav buttons (circular white) */
+    #section6 .carousel-nav {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    #section6 .carousel-nav .nav-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #fff;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+    #section6 .carousel-nav .nav-btn i {
+      color: #060606;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    /* Owl items (cards) */
+    #section6 .owl-item .feature-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      height: 300px; /* adjust as needed */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    /* dim overlay gradient for text readability */
+    #section6 .feature-card::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0) 70%);
+      z-index: 0;
+    }
+
+    /* content inside card */
+    #section6 .feature-card .card-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      color: #fff;
+      width: 100%;
+    }
+
+    #section6 .feature-card .title {
+      font-weight: 800;
+      font-size: 20px;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+
+    #section6 .feature-card .desc {
+      font-size: 12px;
+      opacity: 0.9;
+      max-width: 85%;
+    }
+
+    /* make carousel items a little narrower on very large screens (matching screenshot spacing) */
+    @media (min-width: 1400px){
+      #section6 .owl-stage-outer { padding-left: 16px; padding-right: 16px; }
+      #section6 .owl-item { padding: 0 10px; }
+    }
+
+    /* Small device card height */
+    @media (max-width: 576px) {
+      #section6 .feature-card { height: 220px; }
+      #section6 .section-title { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Section with id "section6" as requested -->
+<section id="section6" class="container-fluid">
+  <div class="container">
+    <div class="header-row">
+      <h2 class="section-title">Safe and sound</h2>
+
+      <!-- custom nav -->
+      <div class="carousel-nav">
+        <button class="nav-btn" id="section6-prev" aria-label="previous">
+          <i class="bi bi-chevron-left">&#x2039;</i>
+        </button>
+        <button class="nav-btn" id="section6-next" aria-label="next">
+          <i class="bi bi-chevron-right">&#x203A;</i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Owl carousel -->
+    <div class="owl-carousel owl-theme" id="section6-carousel">
+      <!-- Example items - replace background-image URL with your images -->
+      <div class="item">
+        <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1519764624211-0a0a5b9f2a6e?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6ae7d3b2fa1c6f2b1b4b1b8c5a58e64c');">
+          <div class="card-content">
+            <div class="title">Theft alerts</div>
+            <div class="desc">Get instant alerts on suspicious movement through the companion app.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6d8e9b0f191fa8f0e7d3f0f1f3b6a7d2');">
+          <div class="card-content">
+            <div class="title">Dual disc brakes</div>
+            <div class="desc">Quick riding, quick braking. Stop at a moment's notice.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1549924231-f129b911e442?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1f2a8aebc6f2b7d9cc1a0a4a8ee6a3ee');">
+          <div class="card-content">
+            <div class="title">FallSafe™</div>
+            <div class="desc">In case of falls, motor power is cut off to prevent accidental throttling.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1607565022263-9b0f1eb0d0d4?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&s=9e3f1f2b0c1f2a3b4c5d6e7f8a9b0c1d');">
+          <div class="card-content">
+            <div class="title">Emergency Stop Signal (ESS)</div>
+            <div class="desc">In panic braking situations, ESS alerts people behind by flashing the tail light.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="feature-card" style="background-image: url('https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8a2e9d4f8b6c9e1a0f2c5b3d7e8a9f0a');">
+          <div class="card-content">
+            <div class="title">Tow & alerts</div>
+            <div class="desc">Alerts you of unusual activity and tows through the mobile app.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- add more items as needed -->
+    </div>
+  </div>
+</section>
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery (required by Owl Carousel 2) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Bootstrap JS (optional for other components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Owl Carousel 2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+  // Initialize the carousel
+  $(document).ready(function(){
+    var $carousel = $('#section6-carousel');
+
+    $carousel.owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,        // we're using custom nav buttons
+      dots: false,
+      autoplay: false,
+      smartSpeed: 700,
+      responsive:{
+        0:{
+          items:1,
+          stagePadding: 40 // partial peek
+        },
+        576:{
+          items:1,
+          stagePadding: 60
+        },
+        768:{
+          items:2,
+          stagePadding: 40
+        },
+        992:{
+          items:3,
+          stagePadding: 40
+        },
+        1400:{
+          items:4,
+          stagePadding: 0
+        }
+      }
+    });
+
+    // Custom nav handlers
+    $('#section6-prev').on('click', function(){
+      $carousel.trigger('prev.owl.carousel');
+    });
+
+    $('#section6-next').on('click', function(){
+      $carousel.trigger('next.owl.carousel');
+    });
+  });
+</script>
+</body>
+</html>
