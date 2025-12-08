@@ -78,3 +78,27 @@
 });
 
 
+// section 6
+
+    $(document).ready(function () {
+
+        const slider = $("#section6-carousel");
+
+        slider.owlCarousel({
+            loop: true,
+            margin: 18,
+            nav: false,
+            dots: false,
+            autoplay: false,
+            responsive: {
+                0: { items: 1.2 },
+                576: { items: 2 },
+                992: { items: 3 },
+                1200: { items: 3.2 }
+            }
+        });
+
+        $("#section6-prev").click(() => slider.trigger("prev.owl.carousel"));
+        $("#section6-next").click(() => slider.trigger("next.owl.carousel"));
+    });
+
