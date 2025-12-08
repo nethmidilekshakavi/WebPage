@@ -12,28 +12,37 @@
     <link rel="stylesheet" href="css/section2.css">
     <link rel="stylesheet" href="css/section3.css">
     <link rel="stylesheet" href="css/section4.css">
+    <link rel="stylesheet" href="css/section5.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <!-- Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
 </head>
 <body style="background-color: #1a1d20; overflow-x: hidden;">
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg text-white">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark thin-nav">
     <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item fw-bold">
-                    <a class="nav-link active" aria-current="page" href="#">Rizta</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible nav (center on lg+, stacked on mobile) -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <!-- Large-screen inline nav (visible on lg and up) -->
+            <ul class="navbar-nav d-none d-lg-flex align-items-center nav-center-gap">
+                <li class="nav-item">
+                    <a class="nav-link active fw-bold" aria-current="page" href="#">Rizta</a>
                 </li>
-                <li class="nav-item fw-bold">
+                <li class="nav-item">
                     <a class="nav-link" href="#">Ather 450</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Overview</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">performance</a>
+                    <a class="nav-link" href="#">Performance</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Connectivity</a>
@@ -42,7 +51,7 @@
                     <a class="nav-link" href="#">Safety</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Comfort & Convenience</a>
+                    <a class="nav-link" href="#">Comfort &amp; Convenience</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
@@ -50,11 +59,36 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Locate Us</a>
                 </li>
-                <button type="button" class="btn btn-light fw-bold">Book a Test Ride</button>
             </ul>
+
+            <!-- Mobile nav (visible under lg) -->
+            <ul class="navbar-nav d-lg-none">
+                <li class="nav-item">
+                    <a class="nav-link active fw-bold" href="#">Rizta</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Ather 450</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Performance</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Connectivity</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Safety</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Comfort &amp; Convenience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Locate Us</a></li>
+
+                <!-- Make the button available inside the collapsed mobile menu -->
+                <li class="nav-item mt-2">
+                    <button class="btn btn-test w-100">Book A Test Ride</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Button on the right for large screens -->
+        <div class="d-none d-lg-block ms-auto">
+            <button class="btn btn-test">Book A Test Ride</button>
         </div>
     </div>
 </nav>
+
 
 <!-- HOME -->
 <header id="home" class="text-white">
@@ -66,7 +100,7 @@
                 <div class="row justify-content-center">
 
                     <div class="col-md-4 text-center mb-4 mb-md-0">
-                        <div class="feature-card p-4">
+                        <div class="feature-card0 p-4">
                             <h2 class="display-7  ">3.3 sec</h2>
                             <p class=" mb-2">0–40 km/h</p>
 
@@ -74,7 +108,7 @@
                     </div>
 
                     <div class="col-md-4 text-center mb-4 mb-md-0">
-                        <div class="feature-card p-4">
+                        <div class="feature-card0 p-4">
                             <h2 class="display-7 ">90 km/h</h2>
                             <p class=" mb-2">Top Speed</p>
 
@@ -82,7 +116,7 @@
                     </div>
 
                     <div class="col-md-4 text-center">
-                        <div class="feature-card p-4">
+                        <div class="feature-card0 p-4">
                             <h2 class="display-7 ">161 km*</h2>
                             <p class=" mb-2">IDC Range</p>
 
@@ -200,78 +234,142 @@
     </div>
 </section>
 
-<section id="section4">
-    <h1 class="main-title2">
-        <span class="text-white">Peak</span> performancesp <span class="text-white">,</span><br>
-        <span class="text-white">brought</span> to you by
-    </h1>
+<div class="container section4-container">
+    <div class="row g-4">
 
-    <div class="container my-5">
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card bg-dark text-white border-0 shadow rounded">
-                    <video class="card-img-top" autoplay loop muted playsinline>
-                        <source src="assets/vidios/section4/Motorsport%20inspired%20form_desk_2x.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Motorsports-inspired form</h5>
-                        <p class="card-text">Clean, futuristic and packs all the speed you would need.</p>
-                    </div>
+        <!-- LEFT BIG VIDEO CARD -->
+        <div class="col-lg-6">
+            <div class="feature-card2 big-card">
+                <video autoplay loop muted playsinline>
+                    <source src="assets/vidios/section4/Motorsport%20inspired%20form_desk_2x.mp4" type="video/mp4">
+                </video>
+                <div class="text-box">
+                    <h4>Motorsports-inspired form</h4>
+                    <p>Clean, futuristic and packs all the speed you would need.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT BIG IMAGE CARD -->
+        <div class="col-lg-6">
+            <div class="feature-card2 big-card">
+                <img src="assets/images/section4/Motor3.png" alt="">
+                <div class="text-box">
+                    <h4>Engine Motor</h4>
+                    <p>6.4kW power. 26 Nm instant torque. So you can take off in a blink.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 SMALL CARDS -->
+        <div class="col-lg-4">
+            <div class="small-feature-card small-card">
+                <div class="content">
+                    <h5>Monoshock Suspension</h5>
+                    <p>Bumps. Potholes. Bad roads. Hold steady and breeze through them all.</p>
+                </div>
+                <img src="assets/images/section4/2X%20-%20Monoshock%20Suspension.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="small-feature-card small-card">
+                <div class="content">
+                    <h5>Aluminium Chassis</h5>
+                    <p>Lightweight. Heavy-duty. Built to glide and handle like a dream.</p>
+                </div>
+                <img src="assets/images/section4/chassy.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="small-feature-card1 small-card1">
+                <div class="content">
+                    <h5>Balanced Weight Distribution</h5>
+                    <p>Sharp turns. Deep curves. Tight corners. Hold steady on them all.</p>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="card bg-dark text-white border-0 shadow rounded">
-                    <img src="assets/images/section4/Motor3.png" class="card-img1-top" alt="Engine Motor">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Engine Motor</h5>
-                        <p class="card-text">6.4kW power. 26 Nm instant torque. So you can take off in a blink.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card bg-dark text-white border-0 shadow rounded">
-                    <div class="card-body" style="margin-top: -5%">
-                        <h5 class="card-title" style="font-size: 20px;">Monoshock Suspension</h5>
-                        <p class="card-text" style="font-size: 15px">Bumps. Potholes. Bad roads. Hold steady and breeze through them all.</p>
-                    </div>
-                    <img src="assets/images/section4/2X%20-%20Monoshock%20Suspension.png" class="card-img1-top" alt="Engine Motor">
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-dark text-white border-0 shadow rounded">
-                    <div class="card-body" style="margin-top: -5%">
-                        <h5 class="card-title" style="font-size: 20px;">Monoshock Suspension</h5>
-                        <p class="card-text" style="font-size: 15px">Bumps. Potholes. Bad roads. Hold steady and breeze through them all.</p>
-                    </div>
-                    <img src="assets/images/section4/chassy.png" class="card-img-top" alt="Engine Motor">
-                </div>
-            </div>
-            <div class="col-md-2 row-cols-2">
-                <div class="cards bg-dark text-white border-0 shadow rounded">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Aluminium Chassis</h5>
-                        <p class="card-text">Lightweight. Heavy-duty. Built to glide and handle like a dream.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="cards bg-dark text-white border-0 shadow rounded">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Engine Motor</h5>
-                        <p class="card-text">6.4kW power. 26 Nm instant torque. So you can take off in a blink.</p>
-                    </div>
+            <div class="small-feature-card2 small-card2" style="margin-top:20px;">
+                <div class="content">
+                    <h5>Low Centre of Gravity</h5>
+                    <p>Better balance and control to switch lanes and dodge obstacles.</p>
                 </div>
             </div>
 
         </div>
     </div>
+</div>
+
+<section class="py-5" id="section5">
+    <div class="container">
+        <h2 class="text-center mb-5" style="color:white;">Dash of smarts</h2>
+
+        <div class="row align-items-start gy-4">
+            <div class="col-lg-8">
+                <div class="image-card position-relative overflow-hidden rounded-3 shadow-sm">
+                    <img id="mainImage" src="" alt="feature image" class="img-fluid w-100 main-img">
+                    <div id="imgCaption" class="caption text-center px-4 py-3">
+                        Find your way like you do on your phone. Without your phone.
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4" style="color: white">
+                <div class="d-grid gap-3">
+                    <button type="button" class="feature-btn btn btn-dark text-start p-3 d-flex align-items-center rounded-4 shadow-sm active"
+                            data-img="assets/images/section5/ather-450-Google-Maps.webp"
+                            data-caption="Find your way like you do on your phone. Without your phone.">
+              <span class="icon me-3 d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white">
+                <i class="bi bi-map-fill"></i>
+              </span>
+                        <div>
+                            <div class="fw-bold">Google Maps platform</div>
+                        </div>
+                    </button>
+
+                    <button type="button" class="feature-btn btn btn-dark text-start p-3 d-flex align-items-center rounded-4 shadow-sm"
+                            data-img="assets/images/section5/ather-450-Music-and-Call-control.webp"
+                            data-caption="Answer or reject calls. Play, pause, replay or skip tracks. All on the go.">
+              <span class="icon me-3 d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white">
+                <i class="bi bi-telephone-fill"></i>
+              </span>
+                        <div>
+                            <div class="fw-bold">Call & Music Control</div>
+                        </div>
+                    </button>
+
+                    <button type="button" class="feature-btn btn btn-dark text-start p-3 d-flex align-items-center rounded-4 shadow-sm"
+                            data-img="assets/images/section5/ather-450-WhatsApp-on-Dash.webp"
+                            data-caption="Card 1 Image
+                    Keep an eye on WhatsApp alerts. And your phone in your pocket.">
+              <span class="icon me-3 d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white">
+                <i class="bi bi-chat-dots-fill"></i>
+              </span>
+                        <div>
+                            <div class="fw-bold">WhatsApp on Dash</div>
+                        </div>
+                    </button>
+
+                    <button type="button" class="feature-btn btn btn-dark text-start p-3 d-flex align-items-center rounded-4 shadow-sm"
+                            data-img="assets/images/section5/ather-450-Share-Live-Location.webp"
+                            data-caption="Your whereabouts, now more easily shareable. Right from the dash.">
+              <span class="icon me-3 d-flex align-items-center justify-content-center rounded-circle bg-secondary text-white">
+                <i class="bi bi-geo-alt-fill"></i>
+              </span>
+                        <div>
+                            <div class="fw-bold">Share Live Location</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
