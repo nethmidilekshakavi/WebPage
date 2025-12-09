@@ -204,3 +204,58 @@
             });
         });
     });
+
+
+    // Counter animation on scroll (section 5)
+    function animateCounter(element, target, duration = 2000) {
+        let start = 0;
+        const increment = target / (duration / 16);
+        let current = 0;
+
+        const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+        element.textContent = target + (element.dataset.suffix || '');
+        clearInterval(timer);
+    } else {
+        if (element.dataset.suffix === '%') {
+        element.textContent = Math.floor(current) + '%';
+    } else {
+        element.textContent = Math.floor(current) + 'km';
+    }
+    }
+    }, 16);
+    }
+
+        const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                entry.target.classList.add('counted');
+                const target = parseInt(entry.target.dataset.target);
+                animateCounter(entry.target, target);
+            }
+        });
+    }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => observer.observe(counter));
+    });
+
+        function observeWithReset() {
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        const target = parseInt(entry.target.dataset.target);
+        animateCounter(entry.target, target);
+    }
+    });
+    }, observerOptions);
+
+        document.querySelectorAll('.counter').forEach(counter => observer.observe(counter));
+    }
