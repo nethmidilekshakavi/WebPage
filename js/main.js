@@ -102,3 +102,105 @@
         $("#section6-next").click(() => slider.trigger("next.owl.carousel"));
     });
 
+    //section 11
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const accordion = document.getElementById('faqAccordion');
+        const triggers = Array.from(accordion.querySelectorAll('.accordion-trigger'));
+
+        function panelFor(btn) {
+            return document.getElementById(btn.getAttribute('aria-controls'));
+        }
+
+        function closePanel(btn) {
+            const panel = panelFor(btn);
+            if (!panel) return;
+            btn.setAttribute('aria-expanded', 'false');
+            panel.style.maxHeight = panel.scrollHeight + 'px'; // ensure start value
+            void panel.offsetHeight;
+            panel.style.transition = 'max-height 300ms ease, opacity 200ms ease';
+            panel.style.maxHeight = '0px';
+            panel.style.opacity = '0';
+            panel.dataset.open = 'false';
+            panel.addEventListener('transitionend', function handler(e) {
+                if (e.propertyName === 'max-height') {
+                    panel.hidden = true;
+                    panel.removeEventListener('transitionend', handler);
+                }
+            });
+        }
+
+        function openPanel(btn) {
+            triggers.forEach(t => {
+                if (t !== btn && t.getAttribute('aria-expanded') === 'true') closePanel(t);
+            });
+
+            const panel = panelFor(btn);
+            if (!panel) return;
+            btn.setAttribute('aria-expanded', 'true');
+            panel.hidden = false;
+            panel.style.transition = 'none';
+            panel.style.maxHeight = '0px';
+            panel.style.opacity = '0';
+            void panel.offsetHeight;
+            panel.style.transition = 'max-height 300ms ease, opacity 200ms ease';
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            panel.style.opacity = '1';
+            panel.dataset.open = 'true';
+
+            panel.addEventListener('transitionend', function handler(e) {
+                if (e.propertyName === 'max-height') {
+                    panel.style.maxHeight = 'none';
+                    panel.removeEventListener('transitionend', handler);
+                }
+            });
+        }
+
+        triggers.forEach((btn, index) => {
+            const panel = panelFor(btn);
+            if (!panel) return;
+
+            if (btn.getAttribute('aria-expanded') === 'true') {
+                panel.hidden = false;
+                panel.style.maxHeight = 'none';
+                panel.style.opacity = '1';
+                panel.dataset.open = 'true';
+            } else {
+                panel.hidden = true;
+                panel.style.maxHeight = '0px';
+                panel.style.opacity = '0';
+                panel.dataset.open = 'false';
+            }
+
+            btn.addEventListener('click', () => {
+                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                if (expanded) {
+                    closePanel(btn);
+                } else {
+                    openPanel(btn);
+                }
+            });
+
+            btn.addEventListener('keydown', (e) => {
+                const key = e.key;
+                if (key === 'ArrowDown') {
+                    e.preventDefault();
+                    const next = triggers[(index + 1) % triggers.length];
+                    next.focus();
+                } else if (key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prev = triggers[(index - 1 + triggers.length) % triggers.length];
+                    prev.focus();
+                } else if (key === 'Home') {
+                    e.preventDefault();
+                    triggers[0].focus();
+                } else if (key === 'End') {
+                    e.preventDefault();
+                    triggers[triggers.length - 1].focus();
+                } else if (key === 'Enter' || key === ' ') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
+        });
+    });

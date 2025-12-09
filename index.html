@@ -18,19 +18,36 @@
     <link rel="stylesheet" href="css/section8.css">
     <link rel="stylesheet" href="css/section9.css">
     <link rel="stylesheet" href="css/section10.css">
+    <link rel="stylesheet" href="css/section11.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- Bootstrap Icons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-
 </head>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            position: relative;
+        }
+    }
+</style>
+
 <body style="background-color: #1a1d20; overflow-x: hidden;">
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark thin-nav">
+<nav class="navbar navbar-expand-lg navbar-dark thin-nav">
     <div class="container-fluid">
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -98,51 +115,40 @@
     </div>
 </nav>
 
-<header id="home" class="text-white">
+<header id="home">
     <div class="image">
-        <img src="assets/images/homePage/450-banner-bike-of-scooters-d-new.webp" alt="">
-        <h1 id="title" style="font-size: 50px">The Super Scooter</h1>
-        <section class="features-section py-5">
+        <img src="assets/images/homePage/450-banner-bike-of-scooters-d-new.webp" alt="Super Scooter">
+        <h1 id="title">The Super Scooter</h1>
+        <section class="features-section">
             <div class="container">
                 <div class="row justify-content-center">
-
-                    <div class="col-md-4 text-center mb-4 mb-md-0">
-                        <div class="feature-card0 p-4">
-                            <h2 class="display-7  ">3.3 sec</h2>
-                            <p class=" mb-2">0–40 km/h</p>
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 text-center mb-4 mb-md-0">
-                        <div class="feature-card0 p-4">
-                            <h2 class="display-7 ">90 km/h</h2>
-                            <p class=" mb-2">Top Speed</p>
-
-                        </div>
-                    </div>
-
                     <div class="col-md-4 text-center">
-                        <div class="feature-card0 p-4">
-                            <h2 class="display-7 ">161 km*</h2>
-                            <p class=" mb-2">IDC Range</p>
-
+                        <div class="feature-card0">
+                            <h2>3.3 sec</h2>
+                            <p>0–40 km/h</p>
                         </div>
                     </div>
-
+                    <div class="col-md-4 text-center">
+                        <div class="feature-card0">
+                            <h2>90 km/h</h2>
+                            <p>Top Speed</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="feature-card0">
+                            <h2>161 km*</h2>
+                            <p>IDC Range</p>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="row mt-5">
                     <div class="col-12 text-center">
-                        <button class="btn btn-primary btn-lg px-5 py-3 fw-bold" style="border-radius: 50px; background-color: white; color: #1a1d20; font-size: medium; border: white;">
-                            Book A Test Ride
-                        </button>
+                        <button class="btn" style="background-color: white; border-radius: 40px; font-weight: bold;">Book A Test Ride</button>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-
 </header>
 
 <section id="section1" class="video-section">
@@ -551,7 +557,68 @@
     </div>
 </section>
 
+<section class="accordion-wrap" aria-label="Frequently asked questions" id="section11">
+    <header class="hero">
+        <h1>Your questions,<br> answered</h1>
+    </header>
 
+    <div class="accordion" id="faqAccordion">
+        <div class="item">
+            <h2 class="heading">
+                <button class="accordion-trigger" aria-expanded="true" aria-controls="panel-1" id="trigger-1">
+                    How much is the Ather 450X km Range?
+                </button>
+            </h2>
+            <div id="panel-1" class="accordion-panel" role="region" aria-labelledby="trigger-1">
+                <p>The Ather 450X comes with two power variants. The first has a 3.7 kWh battery that gives you a 161 km IDC Range. The second has a 2.9 kWh battery that gives you a 126 km IDC Range.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <h2 class="heading">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-2" id="trigger-2">
+                    What is the Ather 450X electric scooter price?
+                </button>
+            </h2>
+            <div id="panel-2" class="accordion-panel" role="region" aria-labelledby="trigger-2" hidden>
+                <p>The Ather 450X electric scooter is available starting at Rs. 799,900. Visit your nearest showroom or call +94 77 755 3355 for more details.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <h2 class="heading">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-3" id="trigger-3">
+                    Where can I buy the Ather 450X?
+                </button>
+            </h2>
+            <div id="panel-3" class="accordion-panel" role="region" aria-labelledby="trigger-3" hidden>
+                <p>All Ather scooters are available for purchase in Sri Lanka at the flagship store in Maradana or through authorized dealers islandwide.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <h2 class="heading">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-4" id="trigger-4">
+                    How is the ride experience of the Ather 450X?
+                </button>
+            </h2>
+            <div id="panel-4" class="accordion-panel" role="region" aria-labelledby="trigger-4" hidden>
+                <p>Riding an Ather 450X is pure joy. With its low centre of gravity and sturdy aluminium frame chassis, it stands out as one of the best electric scooters on the road. Accelerating from 0 to 40 km/h in just 3.3 seconds and reaching a top speed of 90 km/h, it’s built for both quick city rides and smooth journeys on any road in Sri Lanka. Supported by Ather’s expanding fast-charging grid across the country, the 450X offers a range of up to 161 km on a single charge, giving you the freedom to travel farther without worry. Don’t just take our word for it — book a test ride at our flagship store in Maradana or through authorized dealers islandwide and experience the difference yourself.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <h2 class="heading">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-5" id="trigger-5">
+                    What is the top speed of the Ather 450X?
+                </button>
+            </h2>
+            <div id="panel-5" class="accordion-panel" role="region" aria-labelledby="trigger-5" hidden>
+                <p>The Ather 450X has a top speed of 90 km/h.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

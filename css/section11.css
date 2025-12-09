@@ -1,0 +1,128 @@
+:root {
+    --text:#333;
+    --muted:#555;
+    --accent:#0f62fe;
+    --line:#e4e4e4;
+    --transition: 0.3s ease;
+    --chev-size: 10px;
+}
+
+#section11 {
+    margin-top: 5%;
+    background: #ffffff;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 800;
+    color: #222;
+    margin: 10%;
+}
+
+.accordion-wrap {
+    width: 100%;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 600px;
+}
+
+.item {
+    border-bottom: 1px solid var(--line);
+}
+
+.accordion-trigger {
+    width: 100%;
+    padding: 22px 18px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    transition: background var(--transition);
+}
+
+.accordion-trigger:hover {
+    background: rgba(0,0,0,0.04);
+}
+
+.accordion-trigger::after {
+    content: "";
+    width: var(--chev-size);
+    height: var(--chev-size);
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg);
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.accordion-trigger[aria-expanded="true"] {
+    color: var(--accent);
+}
+
+.accordion-trigger[aria-expanded="true"]::after {
+    transform: rotate(-135deg);
+    border-color: var(--accent);
+}
+
+.accordion-panel {
+    padding: 0 18px 18px 18px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    overflow: hidden;
+
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
+}
+
+.accordion-panel[data-open="true"] {
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    #section11 {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .accordion {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .accordion-trigger {
+        font-size: 15px;
+        padding: 18px 14px;
+    }
+
+    .accordion-panel {
+        padding: 0 14px 14px 14px;
+    }
+}
