@@ -86,7 +86,6 @@
                 </li>
             </ul>
 
-            <!-- Mobile nav (visible under lg) -->
             <ul class="navbar-nav d-lg-none" style="color: white">
                 <li class="nav-item">
                     <a class="nav-link active fw-bold" href="#">Rizta</a>
@@ -100,19 +99,63 @@
                 <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Locate Us</a></li>
 
-                <!-- Make the button available inside the collapsed mobile menu -->
                 <li class="nav-item mt-2">
-                    <button class="btn btn-test w-100">Book A Test Ride</button>
+                    <button class="btn btn-test w-100 open-popup-btn">Book A Test Ride</button>
                 </li>
             </ul>
         </div>
 
-        <!-- Button on the right for large screens -->
         <div class="d-none d-lg-block ms-auto">
-            <button class="btn btn-test" style="font-size: small">Book A Test Ride</button>
+            <button class="btn btn-test open-popup-btn" style="font-size: small">Book A Test Ride</button>
         </div>
     </div>
 </nav>
+
+<!-- Popup Modal -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-card">
+        <button class="close-btn" id="closeBtn">&times;</button>
+
+        <h2>Talk to us, directly.</h2>
+        <p>Drop your phone number, and we'll reach out to you.</p>
+
+        <form id="testRideForm">
+            <input type="text" class="form-control" placeholder="Enter your name" required>
+
+            <input type="tel" class="form-control" placeholder="Enter your phone number" required>
+
+            <input type="email" class="form-control" placeholder="Enter your Email address" required>
+
+            <select class="form-select" required>
+                <option value="" selected disabled>Select Your Location</option>
+                <option value="colombo">Colombo</option>
+                <option value="kandy">Kandy</option>
+                <option value="galle">Galle</option>
+                <option value="negombo">Negombo</option>
+                <option value="jaffna">Jaffna</option>
+                <option value="batticaloa">Batticaloa</option>
+            </select>
+
+            <div class="model-label">Pick your model <span>*</span></div>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="model" value="rizta" required>
+                    Rizta
+                </label>
+                <label>
+                    <input type="radio" name="model" value="ather450">
+                    Ather 450
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+
+            <p class="privacy-text">
+                By clicking on "Submit" you are agreeing to our <a href="#">Privacy Policy</a> and are allowing us and our service partners to get in touch with you.
+            </p>
+        </form>
+    </div>
+</div>
 
 <header id="home">
     <div class="image">
@@ -623,5 +666,38 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 
+<script>
+    const popupOverlay = document.getElementById('popupOverlay');
+    const openBtns = document.querySelectorAll('.open-popup-btn');
+    const closeBtn = document.getElementById('closeBtn');
+    const form = document.getElementById('testRideForm');
+
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            popupOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        popupOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    });
+
+    popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+            popupOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+            popupOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
 </body>
 </html>

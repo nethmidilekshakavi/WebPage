@@ -259,3 +259,5 @@
 
         document.querySelectorAll('.counter').forEach(counter => observer.observe(counter));
     }
+
+
