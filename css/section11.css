@@ -20,7 +20,7 @@
 .hero h1 {
     font-size: 48px;
     line-height: 1.1;
-    font-weight: 800;
+    font-weight: 500;
     color: #222;
     margin: 10%;
 }
@@ -45,7 +45,7 @@
     border: none;
     text-align: left;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--text);
     cursor: pointer;
 

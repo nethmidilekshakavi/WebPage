@@ -5,7 +5,7 @@
 }
 
 .section-title {
-    font-weight: 700;
+    font-weight: 500;
     color: #fff;
 }
 
@@ -60,7 +60,7 @@
 
 .card-content .title {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #fff;
 }
 
@@ -68,8 +68,8 @@
     font-size: 0.95rem;
     color: rgba(255,255,255,0.85);
     margin-top: 3px;
-    border: 0; /* හෝ මේක use කරන්න පුළුවන් */
-    outline: none; /* outline එකක් තිබ්බොත් ඒකත් remove වෙයි */
+    border: 0;
+    outline: none;
 
 }
 
@@ -90,6 +90,6 @@
     background-size: cover;
     background-color: #1a1d20;
     background-position: center;
-    border: 0; /* හෝ මේක use කරන්න පුළුවන් */
-    outline: none; /* outline එකක් තිබ්බොත් ඒකත් remove වෙයි */
+    border: 0;
+    outline: none;
 }

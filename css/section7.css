@@ -7,7 +7,7 @@
     color: #fff;
     text-align: center;
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 40px;
 }
 
@@ -44,7 +44,7 @@
 
 .overlay-content h3 {
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 8px;
 }
 
@@ -63,6 +63,6 @@
     padding: 8px 16px;
     border-radius: 24px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 8px;
 }

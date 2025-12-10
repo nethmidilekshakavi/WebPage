@@ -84,7 +84,7 @@ body {
 
 .feature-card0 h2 {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 500;
     color: white;
     margin-bottom: 0;
 }
@@ -100,7 +100,7 @@ body {
     display: inline-block;
     padding: 15px 50px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 50px;
     background-color: white;
     color: #1a1d20;
