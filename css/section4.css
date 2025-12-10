@@ -88,3 +88,11 @@
     justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+    .small-card2 {
+        width: 350px;
+    }
+    .small-card1 {
+        width: 350px;
+    }
+}
