@@ -1,6 +1,7 @@
 #section6 {
     padding-top: 60px;
     padding-bottom: 60px;
+    border-bottom: white;
 }
 
 .section-title {
@@ -13,7 +14,7 @@
     height: 38px;
     border-radius: 50%;
     border: none;
-background-color: white;
+    background-color: white;
     color: black;
     display: inline-flex;
     justify-content: center;
@@ -28,13 +29,14 @@ background-color: white;
 
 
 .feature-card {
+    border-bottom: none;
     position: relative;
     height: 330px;
     border-radius: 18px;
     overflow: hidden;
     background-size: cover;
+    background-color: #1a1d20;
     background-position: center;
-    filter: brightness(0.85);
 }
 
 
@@ -54,7 +56,6 @@ background-color: white;
     bottom: 20px;
     left: 20px;
     right: 20px;
-    z-index: 2;
 }
 
 .card-content .title {
@@ -67,6 +68,9 @@ background-color: white;
     font-size: 0.95rem;
     color: rgba(255,255,255,0.85);
     margin-top: 3px;
+    border: 0; /* හෝ මේක use කරන්න පුළුවන් */
+    outline: none; /* outline එකක් තිබ්බොත් ඒකත් remove වෙයි */
+
 }
 
 
@@ -76,4 +80,16 @@ background-color: white;
     inset: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.1));
     z-index: 1;
+}
+
+.feature-card {
+    position: relative;
+    height: 330px;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-color: #1a1d20;
+    background-position: center;
+    border: 0; /* හෝ මේක use කරන්න පුළුවන් */
+    outline: none; /* outline එකක් තිබ්බොත් ඒකත් remove වෙයි */
 }
