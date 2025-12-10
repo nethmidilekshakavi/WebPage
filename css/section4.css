@@ -90,18 +90,18 @@
 
 @media (max-width: 768px) {
     .small-card2 {
-        width: 350px;
+        width: 365px;
     }
     .small-card1 {
-        width: 350px;
+        width: 365px;
     }
 }
 
 @media (max-width: 500px) {
     .small-card2 {
-        width: 350px;
+        width: 365px;
     }
     .small-card1 {
-        width: 350px;
+        width: 365px;
     }
 }
