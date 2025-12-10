@@ -14,7 +14,8 @@
 }
 
 .copyright-text {
-    color:#1a1d20;
+    font-weight: 500;
+    color:#1a1a1a;
     font-size: 0.85rem;
 }
 
@@ -24,7 +25,8 @@
 }
 
 .footer-link {
-    color:#1a1d20;
+    font-weight: 500;
+    color:#1a1a1a;
     text-decoration: none;
     font-size: 0.85rem;
     transition: color 0.3s;
