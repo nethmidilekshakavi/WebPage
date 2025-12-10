@@ -1,3 +1,4 @@
+
 .navbar {
     padding: 10px;
     display: flex;
@@ -21,6 +22,7 @@
     margin-right: 0.5rem;
     color: rgba(255,255,255,0.9) !important;
 }
+
 .nav-center-gap .nav-link {
     color: rgba(255,255,255,0.75);
     font-size: 13px;
@@ -28,7 +30,6 @@
     line-height: 1;
     transition: color .15s ease;
 }
-
 
 .nav-center-gap .nav-item + .nav-item {
     margin-left: 18px;
@@ -51,27 +52,14 @@
     font-weight: 600;
     border-radius: 999px;
     padding: 6px 18px;
-    width: auto;
     height: 40px;
-    box-shadow: none;
     border: 0;
 }
+
 .btn.btn-test {
     background-color: white;
     border-radius: 40px;
     font-weight: bold;
-}
-
-.navbar-toggler {
-    width: 40px;
-    height: 36px;
-    padding: 3px 6px;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.04);
-}
-
-.navbar-toggler-icon {
-    filter: invert(1) brightness(.9);
 }
 
 @media (min-width: 992px) {
@@ -82,4 +70,69 @@
 
 @media (max-width: 991.98px) {
     .small-brand { margin-right: 0.25rem; }
+}
+
+
+
+.navbar-toggler {
+    border: none !important;
+    padding: 0 !important;
+}
+
+
+.custom-toggler {
+    width: 45px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .25s ease, box-shadow .3s ease;
+}
+
+.custom-toggler:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+.custom-toggler .toggler-icon {
+    width: 22px;
+    height: 2px;
+    background: white;
+    position: relative;
+    transition: .3s ease;
+}
+
+.custom-toggler .toggler-icon::before,
+.custom-toggler .toggler-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: white;
+    transition: .3s ease;
+}
+
+.custom-toggler .toggler-icon::before {
+    top: -6px;
+}
+
+.custom-toggler .toggler-icon::after {
+    top: 6px;
+}
+
+.custom-toggler[aria-expanded="true"] .toggler-icon {
+    background: transparent;
+}
+
+.custom-toggler[aria-expanded="true"] .toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.custom-toggler[aria-expanded="true"] .toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
 }

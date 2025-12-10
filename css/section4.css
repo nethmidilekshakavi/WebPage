@@ -96,3 +96,12 @@
         width: 350px;
     }
 }
+
+@media (max-width: 500px) {
+    .small-card2 {
+        width: 350px;
+    }
+    .small-card1 {
+        width: 350px;
+    }
+}
